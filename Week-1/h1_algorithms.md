@@ -143,18 +143,18 @@ function quickSort(arr) {
 ```java
 public class QuickSort {
 
-    public static void swap(int[] array, int firstIndex, int secondIndex) {
-      int temp = array[firstIndex];
-      array[firstIndex] = array[secondIndex];
-      array[secondIndex] = temp;
-    }
+  public static void swap(int[] array, int firstIndex, int secondIndex) {
+    int temp = array[firstIndex];
+    array[firstIndex] = array[secondIndex];
+    array[secondIndex] = temp;
+  }
 
-    public static int pivot(int[] array, int pivotIndex, int endIndex) {
-      int swapIndex = pivotIndex;
-      for(int i = pivotIndex + 1; i <= endIndex; i++) {
-        if(array[i] < array[pivotIndex]) {
-          swapIndex++;
-          swap(array, i, swapIndex);
+  public static int pivot(int[] array, int pivotIndex, int endIndex) {
+    int swapIndex = pivotIndex;
+    for(int i = pivotIndex + 1; i <= endIndex; i++) {
+      if(array[i] < array[pivotIndex]) {
+        swapIndex++;
+        swap(array, i, swapIndex);
         }
       }
       swap(array, pivotIndex, swapIndex);
@@ -164,8 +164,8 @@ public class QuickSort {
     public static void quickSortHelper(int[] array, int left, int right){
       if(left < right){
         int pivotIndex = pivot(array, left, right);
-        quickSort(array, left, pivotIndex - 1);
-        quickSort(array, pivotIndex + 1, right);
+        quickSortHelper(array, left, pivotIndex - 1);
+        quickSortHelper(array, pivotIndex + 1, right);
       }
     }
 
