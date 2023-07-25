@@ -117,6 +117,8 @@ public static int binarySearch(int[] arr, int target) {
 
 - Big O Notation: O(n log n)
 
+- Worst Case: O(n^2)
+
 `Example:` Quicksort with JavaScript
 
 ```javascript
