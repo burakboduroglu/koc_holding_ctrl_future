@@ -101,6 +101,28 @@ public static int binarySearch(int[] arr, int target) {
 }
 ```
 
+`Example:` Binary Search with Recursion
+
+```java
+public class Main {
+    public static String binary(int[] arr, int start, int end, int target){
+        if(start > end) return "Not Found";
+
+        int middle = ((start+end) / 2);
+
+        if(arr[middle] == target) return ("Number found: " + arr[middle]);
+        else if(arr[middle] > target) return binary(arr, start, middle-1, target);
+        else return binary(arr, middle + 1, end, target);
+    }
+
+    public static void main(String[] args) {
+        int[] array = {1,2,4,5,6,6,7};
+        System.out.println(binary(array, 0, array.length-1, 5));
+
+    }
+}
+```
+
 `Example:` Binary Search with GIF
 
 ![Binary Search](https://media.tenor.com/Jl0YrqxnHmAAAAAd/binary-search-sequence-search.gif)
