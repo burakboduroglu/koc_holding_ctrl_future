@@ -278,3 +278,77 @@ public class Main {
 ![Merge Sort](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif?20151222172210)
 
 > [Source of GIF](https://commons.wikimedia.org/wiki/File:Merge-sort-example-300px.gif)
+
+## Bubble Sort:
+
+- Bubble sort is a simple sorting algorithm. This sorting algorithm is comparison-based algorithm in which each pair of adjacent elements is compared and the elements are swapped if they are not in order.
+
+- This algorithm is not suitable for large data sets as its average and worst case complexity are of Ο(n2) where n is the number of items.
+
+- Bubble sort is a stable algorithm, in that it retains the relative order of elements which are equal.
+
+- Big O Notation: O(n^2)
+
+`Example:` Bubble Sort with JavaScript
+
+```javascript
+function bubbleSort(arr) {
+  let swapped = false;
+
+  do {
+    swapped = false;
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > arr[i + 1]) {
+        let temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+        swapped = true;
+      }
+    }
+  } while (swapped);
+
+  return arr;
+}
+```
+
+`Example:` Bubble Sort with Java
+
+```java
+public class Main {
+    public static int[] bubbleSort(int[] array) {
+        boolean isSorted = false;
+        int lastUnsorted = array.length - 1;
+
+        while (!isSorted){
+          isSorted = true;
+          for(int i = 0; i < array.length - 1; i++){
+            if(array[i] > array[i + 1]){
+              swap(array, i, i + 1);
+              isSorted = false;
+            }
+          }
+          lastUnsorted--;
+        }
+        return array;
+    }
+
+    public static void swap(int[] array, int i, int j){
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        int[] array = {5, 3, 1, 8, 2, 9, 7, 6, 4};
+        int[] sorted = bubbleSort(array);
+        System.out.println(Arrays.toString(sorted));
+    }
+}
+```
+
+`Example:` Bubble Sort with GIF
+
+![Bubble Sort](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif?20131109191607)
+
+> [Source of GIF](https://commons.wikimedia.org/wiki/File:Bubble-sort-example-300px.gif)
