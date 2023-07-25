@@ -225,12 +225,6 @@ function merge(left, right) {
 
 ```java
 public class Main {
-   public static void swap(int[] array, int firstIndex, int secondIndex){
-        int temp = array[firstIndex];
-        array[firstIndex] = array[secondIndex];
-        array[secondIndex] = temp;
-    }
-
     public static int[] merge(int[] array1, int[] array2) {
         int[] combined = new int[array1.length + array2.length];
         int index = 0;
