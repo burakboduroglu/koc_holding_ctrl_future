@@ -352,3 +352,103 @@ public class Main {
 ![Bubble Sort](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif?20131109191607)
 
 > [Source of GIF](https://commons.wikimedia.org/wiki/File:Bubble-sort-example-300px.gif)
+
+## Memoization and Dynamic Programming:
+
+- Memoization is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again.
+
+- Memoization is a specific form of caching that involves caching the return value of a function based on its parameters. Memoization is a way to speed up code by caching the results of expensive function calls and returning the cached result when the same inputs occur again.
+
+- Dynamic programming is a method for solving a complex problem by breaking it down into a collection of simpler subproblems, solving each of those subproblems just once, and storing their solutions using a memory-based data structure (array, map,etc).
+
+- Dynamic programming is a technique for solving problems of recursive nature, iteratively and is applicable when the computations of the subproblems overlap.
+
+- Dynamic programming is a bottom-up approach. We solve all possible small problems and then combine to obtain solutions for bigger problems.
+
+- Dynamic programming is a very powerful algorithmic technique in which a problem is solved by identifying a collection of subproblems and tackling them one by one, smallest first, using the answers to small problems to help figure out larger ones, until the whole lot of them is solved.
+
+- Dynamic programming is a technique to solve the recursive problems in more efficient manner. Many times in recursion we solve the sub-problems repeatedly. In dynamic programming we store the solution of these sub-problems so that we do not have to solve them again, this is called Memoization.
+
+`Example:` Memoization with JavaScript
+
+```javascript
+function memoize(fn) {
+  const cache = {};
+  return function (...args) {
+    if (cache[args]) return cache[args];
+
+    const result = fn.apply(this, args);
+    cache[args] = result;
+
+    return result;
+  };
+}
+
+function slowFib(n) {
+  if (n < 2) return n;
+  return fib(n - 1) + fib(n - 2);
+}
+
+const fib = memoize(slowFib);
+```
+
+`Example:` Memoization with Java
+
+```java
+import java.util.HashMap;
+
+public class Main {
+    public static HashMap<Integer, Integer> cache = new HashMap<>();
+
+    public static int fib(int n) {
+        if (n < 2) return n;
+        if (cache.containsKey(n)) return cache.get(n);
+        int result = fib(n - 1) + fib(n - 2);
+        cache.put(n, result);
+        return result;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(fib(50));
+    }
+}
+```
+
+`Example:` Dynamic Programming with JavaScript
+
+```javascript
+function fib(n) {
+  const result = [0, 1];
+
+  for (let i = 2; i <= n; i++) {
+    const a = result[i - 1];
+    const b = result[i - 2];
+
+    result.push(a + b);
+  }
+
+  return result[n];
+}
+```
+
+`Example:` Dynamic Programming with Java
+
+```java
+public class Main {
+    public static int fib(int n) {
+        int[] result = new int[n + 1];
+        result[0] = 0;
+        result[1] = 1;
+
+        for (int i = 2; i <= n; i++) {
+            result[i] = result[i - 1] + result[i - 2];
+        }
+
+        return result[n];
+    }
+
+    public static void main(String[] args) {
+        System.out.println(fib(50));
+    }
+}
+```
