@@ -181,3 +181,96 @@ public class QuickSort {
 ![Quicksort](https://upload.wikimedia.org/wikipedia/commons/9/9c/Quicksort-example.gif)
 
 > [Source of GIF](https://commons.wikimedia.org/wiki/File:Quicksort-example.gif)
+
+## Merge Sort:
+
+- Merge sort is a sorting technique based on divide and conquer technique. With worst-case time complexity being Ο(n log n), it is one of the most respected algorithms.
+
+- Merge sort first divides the array into equal halves and then combines them in a sorted manner.
+
+- Big O Notation: O(n log n)
+
+`Example:` Merge Sort with JavaScript
+
+```javascript
+function mergeSort(arr) {
+  if (arr.length <= 1) return arr;
+
+  let mid = Math.floor(arr.length / 2);
+  let left = arr.slice(0, mid);
+  let right = arr.slice(mid);
+
+  return merge(mergeSort(left), mergeSort(right));
+}
+
+function merge(left, right) {
+  let result = [];
+
+  while (left.length && right.length) {
+    if (left[0] < right[0]) result.push(left.shift());
+    else result.push(right.shift());
+  }
+
+  return [...result, ...left, ...right];
+}
+```
+
+`Example:` Merge Sort with Java
+
+```java
+public class MergeSort {
+
+    public static void sort(int[] array, int low, int high) {
+        if (low < high) {
+            int mid = (low + high) / 2;
+            sort(array, low, mid);
+            sort(array, mid + 1, high);
+            merge(array, low, mid, high);
+        }
+    }
+
+    private static void merge(int[] array, int low, int mid, int high) {
+        int[] temp = new int[high - low + 1];
+        int i = low;
+        int j = mid + 1;
+        int k = 0;
+        while (i <= mid && j <= high) {
+            if (array[i] <= array[j]) {
+                temp[k] = array[i];
+                i++;
+            } else {
+                temp[k] = array[j];
+                j++;
+            }
+            k++;
+        }
+        while (i <= mid) {
+            temp[k] = array[i];
+            i++;
+            k++;
+        }
+        while (j <= high) {
+            temp[k] = array[j];
+            j++;
+            k++;
+        }
+        for (k = low; k <= high; k++) {
+            array[k] = temp[k - low];
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] array = {5, 3, 1, 8, 2, 9, 7, 6, 4};
+        sort(array, 0, array.length - 1);
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
+}
+```
+
+`Example:` Merge Sort with GIF
+
+![Merge Sort](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif?20151222172210)
+
+> [Source of GIF](https://commons.wikimedia.org/wiki/File:Merge-sort-example-300px.gif)
