@@ -47,6 +47,8 @@ public static int countFiles(File dir) {
 
 - Binary search looks for a particular item by comparing the middle most item of the collection. If a match occurs, then the index of item is returned. If the middle item is greater than the item, then the item is searched in the sub-array to the left of the middle item. Otherwise, the item is searched for in the sub-array to the right of the middle item. This process continues on the sub-array as well until the size of the subarray reduces to zero.
 
+- Big O Notation: O(log n)
+
 `Example:` Binary Search with JavaScript
 
 ```javascript
@@ -112,6 +114,8 @@ public static int binarySearch(int[] arr, int target) {
 - The sub-arrays are then sorted recursively. This can be done in-place, requiring small additional amounts of memory to perform the sorting.
 
 - Quicksort is a comparison sort, meaning that it can sort items of any type for which a "less-than" relation (formally, a total order) is defined.
+
+- Big O Notation: O(n^2)
 
 `Example:` Quicksort with JavaScript
 
