@@ -115,7 +115,7 @@ public static int binarySearch(int[] arr, int target) {
 
 - Quicksort is a comparison sort, meaning that it can sort items of any type for which a "less-than" relation (formally, a total order) is defined.
 
-- Big O Notation: O(n^2)
+- Big O Notation: O(n log n)
 
 `Example:` Quicksort with JavaScript
 
