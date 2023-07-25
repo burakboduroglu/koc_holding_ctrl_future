@@ -84,7 +84,7 @@ public static int binarySearch(int[] arr, int target) {
   }
 
   while (start <= end) {
-    int mid = (start + end) / 2;
+    int mid = Math.floor((start + end) / 2);
 
     if (arr[mid] == target) {
       return mid;
