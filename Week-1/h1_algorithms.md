@@ -224,53 +224,57 @@ function merge(left, right) {
 `Example:` Merge Sort with Java
 
 ```java
-public class MergeSort {
-
-    public static void sort(int[] array, int low, int high) {
-        if (low < high) {
-            int mid = (low + high) / 2;
-            sort(array, low, mid);
-            sort(array, mid + 1, high);
-            merge(array, low, mid, high);
-        }
+public class Main {
+   public static void swap(int[] array, int firstIndex, int secondIndex){
+        int temp = array[firstIndex];
+        array[firstIndex] = array[secondIndex];
+        array[secondIndex] = temp;
     }
 
-    private static void merge(int[] array, int low, int mid, int high) {
-        int[] temp = new int[high - low + 1];
-        int i = low;
-        int j = mid + 1;
-        int k = 0;
-        while (i <= mid && j <= high) {
-            if (array[i] <= array[j]) {
-                temp[k] = array[i];
+    public static int[] merge(int[] array1, int[] array2) {
+        int[] combined = new int[array1.length + array2.length];
+        int index = 0;
+        int i = 0;
+        int j = 0;
+        while (i < array1.length && j < array2.length) {
+            if (array1[i] < array2[j]) {
+                combined[index] = array1[i];
+                index++;
                 i++;
             } else {
-                temp[k] = array[j];
+                combined[index] = array2[j];
+                index++;
                 j++;
             }
-            k++;
         }
-        while (i <= mid) {
-            temp[k] = array[i];
+        while (i < array1.length) {
+            combined[index] = array1[i];
+            index++;
             i++;
-            k++;
         }
-        while (j <= high) {
-            temp[k] = array[j];
+        while (j < array2.length) {
+            combined[index] = array2[j];
+            index++;
             j++;
-            k++;
         }
-        for (k = low; k <= high; k++) {
-            array[k] = temp[k - low];
-        }
+        return combined;
+    }
+
+
+    public static int[] mergeSort(int[] array){
+        if (array.length == 1) return array;
+
+        int midIndex = array.length/2;
+        int[] left = mergeSort(Arrays.copyOfRange(array, 0, midIndex));
+        int[] right = mergeSort(Arrays.copyOfRange(array, midIndex, array.length));
+
+        return merge(left, right);
     }
 
     public static void main(String[] args) {
         int[] array = {5, 3, 1, 8, 2, 9, 7, 6, 4};
-        sort(array, 0, array.length - 1);
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
+        int[] merged = mergeSort(array);
+        System.out.println(Arrays.toString(merged));
     }
 }
 ```
