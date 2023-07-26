@@ -1,4 +1,4 @@
-# Week - 1 Database Architecture
+# Week - 2 Database Architecture
 
 - Fundamentals of Database Systems
 - DBMS Languages, Interfaces & Classification
