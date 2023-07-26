@@ -28,6 +28,7 @@
   - The change in requirements is welcomed, even late in development.
 
 - `Aim of Agile: `
+
   - Self organizing, cross functional teams.
   - Deliver working software frequently.
   - Increase project output speed.
