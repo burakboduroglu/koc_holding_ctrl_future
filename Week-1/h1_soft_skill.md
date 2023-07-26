@@ -26,7 +26,7 @@
 - Coding
 - Testing
 - Deployment
-- Operate
+- Operate - Maintain
 
 #### Feasibility study
 
@@ -52,6 +52,6 @@
 
 - Deployment is the process of deploying the system. It is the process of deploying the system.
 
-#### Operate
+#### Operate - Maintain
 
-- Operate is the process of operating the system. It is the process of operating the system.
+- Operate - Maintain is the process of operating and maintaining the system. It is the process of operating and maintaining the system.
