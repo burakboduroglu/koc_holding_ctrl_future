@@ -1,6 +1,8 @@
 # Week - 1 Object Oriented Programming
 
-### What is Object Oriented Programming?
+- Intro to Object Oriented Programming
+
+## What is Object Oriented Programming?
 
 - Object Oriented Programming is a programming paradigm that relies on the concept of classes and objects. It is used to structure a software program into simple, reusable pieces of code blueprints (usually called classes), which are used to create individual instances of objects. There are many object-oriented programming languages including JavaScript, C++, Java, and Python.
 
