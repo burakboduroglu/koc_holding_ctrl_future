@@ -86,3 +86,9 @@
 - `Product Roadmap: `
   - A product roadmap is a high-level plan that describes how you will achieve your product vision.
   - It is a high-level plan that describes how you will achieve your product vision.
+
+### What is a Product Backlog?
+
+- `Product Backlog: `
+  - A product backlog is a list of all the work that needs to be done to achieve your product vision.
+  - It is a list of all the work that needs to be done to achieve your product vision.
