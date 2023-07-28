@@ -34,3 +34,55 @@
   - Increase project output speed.
   - To increase the project team's adaptation to change.
   - Open to continuous learning and change.
+
+### Agile Project Management - Sprints
+
+- `Sprint: `
+
+  - A sprint is a short, time-boxed period when a scrum team works to complete a set amount of work.
+  - Sprints are at the very heart of scrum and agile methodologies, and getting sprints right will help your agile team ship better software with fewer headaches.
+
+- `Sprint Planning: `
+
+  - Sprint planning is an event in scrum that kicks off the sprint.
+  - The purpose of sprint planning is to define what can be delivered in the sprint and how that work will be achieved.
+
+- `Sprint Review: `
+
+  - The sprint review is an informal meeting that takes place at the end of each sprint where the team presents the work that was completed during the sprint.
+  - During the sprint review, the project is assessed against the sprint goal determined during the sprint planning meeting.
+
+- `Sprint Retrospective: `
+
+  - The sprint retrospective is a meeting facilitated by the scrum master at which the team discusses the just-concluded sprint and determines what could be changed that might make the next sprint more productive.
+  - The sprint retrospective is the final step in the sprint.
+
+### - How to create an Agile Product Vision?
+
+- `Product Vision: `
+
+  - A product vision is a shared understanding of the product you are trying to build.
+  - It is a short, simple statement that communicates your product's overall purpose.
+  - A product vision should answer two questions: "Why are we building this product?" and "What value will it bring to our users and our business?"
+
+- `Product Mission: `
+
+  - A product mission is a short statement that describes why your product exists.
+  - It should be a clear, concise statement that explains the purpose of your product.
+  - A product mission should answer the question: "Why are we building this product?"
+
+- `Product Strategy: `
+
+  - A product strategy is a plan for how you will achieve your product vision.
+  - It is a high-level plan that describes how you will achieve your product vision.
+
+- `Product Backlog: `
+
+  - A product backlog is a list of all the work that needs to be done to achieve your product vision.
+  - It is a list of all the work that needs to be done to achieve your product vision.
+
+### What Is A Product Roadmap?
+
+- `Product Roadmap: `
+  - A product roadmap is a high-level plan that describes how you will achieve your product vision.
+  - It is a high-level plan that describes how you will achieve your product vision.
