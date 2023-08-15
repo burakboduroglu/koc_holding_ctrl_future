@@ -732,8 +732,272 @@ Get-AzVM -name myVMPS -status | Format-Table -autosize
 Stop-AzVM -ResourceGroupName myRGPS -Name myVMPS
 ```
 
+- Review Azure Advisor recommendations for the virtual machine.
+
+  - Azure Advisor is a free Azure service that analyzes your Azure usage and configurations and provides personalized recommendations to help you optimize your resources for high availability, security, performance, and cost.
+
+  - All Services > Advisor > Overview > All Recommendations
+
+---
+
 ## Azure VM with a PowerShell
 
 Same with the previous one.
 
+---
+
 ## Azure VM with a CLI
+
+- Verify the resource group you are using by entering the following command.
+
+```bash
+az group list --output table
+```
+
+- Create a virtual machine.
+
+```bash
+az vm create \
+--name myVMCLI \
+--resource-group myRGCLI-lod33166774 \
+--image UbuntuLTS \
+--location EastUS2 \
+--admin-username azureuser \
+--admin-password Pa$$w0rd1234
+```
+
+- Retrieve information about the virtual machine you provisioned, including name, resource group, location, and status.
+
+```bash
+az vm show --resource-group myRGCLI-lod33166774 --name myVMCLI --show-details --output table
+```
+
+- Stop the virtual machine.
+
+```bash
+az vm stop --resource-group myRGCLI-lod33166774 --name myVMCLI
+```
+
+- Review Azure Advisor recommendations for the virtual machine.
+
+  - Azure Advisor is a free Azure service that analyzes your Azure usage and configurations and provides personalized recommendations to help you optimize your resources for high availability, security, performance, and cost.
+
+  - All Services > Advisor > Overview > All Recommendations
+
+---
+
+## Azure Key Vault
+
+Azure Key Vault is a cloud service that provides a secure store for secrets. You can securely store keys, passwords, certificates, and other secrets. You can also encrypt keys and secrets using keys you've stored in Key Vault.
+
+### Why we use Azure Key Vault?
+
+- **Secure Key Management:** Key Vault provides a secure and isolated environment for storing cryptographic keys, which are essential for encryption, decryption, and other security operations. Storing keys in Key Vault helps protect them from unauthorized access and potential compromise.
+
+- **Secret Management:** Key Vault allows you to securely store and manage secrets, such as connection strings, API keys, passwords, and other sensitive configuration data. These secrets can be easily accessed by authorized applications and services without exposing them in code or configuration files.
+
+- **Centralized Management:** With Key Vault, you can centralize the management of keys and secrets across your organization. This makes it easier to enforce consistent security practices and policies across different applications and services.
+
+- **Auditing and Logging:** Key Vault provides auditing and logging capabilities, allowing you to track who accessed the keys and secrets, when they were accessed, and what operations were performed. This helps with compliance requirements and security monitoring.
+
+- **Integration with Azure Services:** Azure Key Vault seamlessly integrates with various Azure services, such as Virtual Machines, Azure Functions, Azure App Service, Azure Kubernetes Service (AKS), and more. This integration allows these services to securely retrieve the necessary keys and secrets they require to operate.
+
+- **Encryption and Data Protection:** By using Key Vault to manage keys and secrets, you can enhance the security of your applications by enabling encryption of data at rest and in transit. This is crucial for protecting sensitive information and meeting regulatory compliance requirements.
+
+- **High Availability and Redundancy:** Azure Key Vault offers high availability and redundancy features, ensuring that your keys and secrets are always accessible even in the case of datacenter outages or other disruptions.
+
+- **Role-Based Access Control (RBAC):** Key Vault supports RBAC, which means you can control who has access to keys and secrets and define fine-grained permissions. This helps enforce the principle of least privilege and reduces the risk of unauthorized access.
+
+- **Managed Certificates:** Azure Key Vault can also be used to manage SSL/TLS certificates, making it easier to provision, renew, and manage certificates for your applications and services.
+
+- **Developer and DevOps Efficiency:** Using Key Vault simplifies the process of managing sensitive information for developers and DevOps teams. It reduces the need to hardcode or distribute sensitive data, making applications more maintainable and secure.
+
+### Create a Key Vault
+
+1. In the Azure portal, select **Create a resource**.
+
+2. In the **New** dialog, select **Key Vault**.
+
+3. In the **Key Vault** dialog, select **Create**.
+
+4. In the **Create key vault** dialog, enter the following values:
+
+   - **Subscription**: Select your Azure subscription.
+
+   - **Resource group**: Select **myResourceGroup**.
+
+   - **Key vault name**: Enter **myKeyVault**.
+
+   - **Region**: Select the region closest to you.
+
+   - **Pricing tier**: Select **Standard**.
+
+   - **Soft delete**: Select **Enable**.
+
+   - **Purge protection**: Select **Enable**.
+
+   - **Access policies**: Select **None selected**.
+
+5. Select **Review + create**.
+
+6. Select **Create**.
+
+### Create a secret
+
+1. In the Azure portal, select **Resource groups** on the far left. Then select **myResourceGroup** in the resource group list.
+
+2. On the **myResourceGroup** page, select **myKeyVault**.
+
+3. On the **myKeyVault** page, select **Secrets** under **Settings**.
+
+4. On the **Secrets** page, select **Generate/Import**.
+
+5. On the **Create a secret** page, enter the following values:
+
+   - **Upload options**: Select **Manual**.
+
+   - **Name**: Enter **mySecret**.
+
+   - **Value**: Enter **mySecretValue**.
+
+   - **Content type**: Select **text/plain**.
+
+   - **Enabled**: Select **Yes**.
+
+6. Select **Create**.
+
+### Retrieve a secret
+
+1. In the Azure portal, select **Resource groups** on the far left. Then select **myResourceGroup** in the resource group list.
+
+2. On the **myResourceGroup** page, select **myKeyVault**.
+
+3. On the **myKeyVault** page, select **Secrets** under **Settings**.
+
+4. On the **Secrets** page, select **mySecret**.
+
+5. On the **mySecret** page, select **Show secret value**.
+
+6. Copy the secret value to the clipboard.
+
+### Delete a secret
+
+1. In the Azure portal, select **Resource groups** on the far left. Then select **myResourceGroup** in the resource group list.
+
+2. On the **myResourceGroup** page, select **myKeyVault**.
+
+3. On the **myKeyVault** page, select **Secrets** under **Settings**.
+
+4. On the **Secrets** page, select **mySecret**.
+
+5. On the **mySecret** page, select **Delete**.
+
+6. Select **Yes** to confirm the deletion.
+
+---
+
+## Azure Secure Network Traffic
+
+Azure Secure Network Traffic is a service that provides secure network connectivity between Azure resources. It enables you to connect virtual machines, Azure Kubernetes Service (AKS) clusters, Azure App Service, and other Azure services privately without exposing them to the public internet.
+
+### Why we use Azure Secure Network Traffic?
+
+- **Data Protection:** Secure network traffic helps protect sensitive data from interception, eavesdropping, and unauthorized access as it traverses the network. This is crucial for maintaining the confidentiality of sensitive information.
+
+- **Compliance Requirements:** Many industries and regulatory standards (such as GDPR, HIPAA, and PCI DSS) require organizations to implement security measures to protect data during transmission. Secure network traffic helps you meet these compliance requirements.
+
+- **Mitigation of Threats:** Secure network traffic helps guard against various threats, including man-in-the-middle attacks, packet sniffing, and data tampering. By encrypting the traffic, you can ensure that even if a malicious actor intercepts the data, they cannot decipher its contents.
+
+- **Authentication and Authorization:** Secure network traffic often involves mechanisms for mutual authentication and authorization, ensuring that only trusted parties can communicate with each other. This prevents unauthorized entities from accessing your resources.
+
+- **Vulnerability Prevention:** Secure network traffic can help prevent vulnerabilities like session hijacking or replay attacks by ensuring that data cannot be easily intercepted, altered, or replayed by attackers.
+
+- **Data Integrity:** Secure network traffic measures, such as transport layer security (TLS) or secure sockets layer (SSL) encryption, help ensure the integrity of data during transmission. This prevents tampering or modification of data in transit.
+
+- **Public Network Protection:** In cloud environments like Azure, where resources may be distributed across different geographical regions and data centers, securing network traffic becomes even more critical to protect data as it traverses potentially untrusted public networks.
+
+- **Securing Multi-Tier Architectures:** In complex multi-tier architectures, secure network traffic ensures that communication between different tiers, such as web servers, application servers, and databases, is encrypted and protected.
+
+- **Secure Communication with APIs:** Many applications communicate with external services and APIs. Secure network traffic ensures that these communications are encrypted and secure, preventing potential exposure of sensitive data.
+
+- **Zero Trust Security:** Implementing secure network traffic aligns with the principles of zero trust security, where every interaction and communication is treated as potentially untrusted. This approach enhances overall security posture by minimizing the attack surface.
+
+---
+
+## Azure Manage Access with RBAC
+
+Azure Role-Based Access Control (RBAC) is a service that provides fine-grained access management of Azure resources. It enables you to grant users the specific permissions they need to perform their jobs, while preventing unauthorized access to resources.
+
+### Why we use Azure Manage Access with RBAC?
+
+- **Granular Access Control:** RBAC provides fine-grained control over permissions. You can define exactly what actions (read, write, delete, etc.) a user or group can perform on specific Azure resources. This ensures that users have the minimum required permissions to perform their tasks without granting unnecessary access.
+
+- **Security and Compliance:** RBAC helps you enforce security and compliance policies by ensuring that only authorized users can access and manage resources. This reduces the risk of unauthorized access, data breaches, and configuration errors.
+
+- **Reduced Attack Surface:** RBAC helps minimize the attack surface by limiting access to resources. Users and applications only have access to the resources they need, reducing the potential impact of security breaches.
+
+- **Delegation of Responsibility:** RBAC allows you to delegate specific administrative tasks to different teams or individuals without granting them full administrative access. This enables separation of duties and helps prevent accidental or intentional misuse of privileges.
+
+- **Dynamic Access Management:** RBAC enables dynamic access management by allowing you to assign and revoke permissions as needed. As roles change or employees leave the organization, you can easily adjust access without making extensive changes to resource configurations.
+
+- **Simplified Access Management:** RBAC simplifies access management by providing predefined roles with well-defined permissions. Instead of manually configuring permissions for each user, you can assign users to appropriate roles, which saves time and reduces the risk of misconfiguration.
+
+- **Audit and Monitoring:** RBAC provides an audit trail of who performed which actions on resources. This helps with compliance requirements, troubleshooting, and security monitoring.
+
+- **Integration with Identity Providers:** RBAC integrates seamlessly with Azure Active Directory (Azure AD) and other identity providers, allowing you to use existing user and group definitions for access management.
+
+- **Scalability:** As your organization's Azure environment grows, RBAC scales easily. You can continue to manage access efficiently without resorting to ad-hoc access controls.
+
+- **Application-Specific Access:** RBAC is not limited to human users; it can also be used to manage access for applications and services that interact with Azure resources. This ensures that applications have the necessary permissions to function correctly without unnecessary access.
+
+### Create a Azure resource group
+
+1. In the Azure portal, select **Create a resource** in the upper left-hand corner.
+
+2. In the **Search the Marketplace** field, enter **Resource group**. Select **Resource group** from the results.
+
+3. Select **Create**.
+
+4. On the **Create a resource group** page, enter the following values:
+
+   - **Subscription**: Select your subscription.
+
+   - **Resource group**: Enter **myResourceGroup**.
+
+   - **Region**: Select **East US**.
+
+5. Select **Review + create**.
+
+6. Select **Create**.
+
+### Create a Azure role assignment
+
+1. In the Azure portal, select **Resource groups** on the far left. Then select **myResourceGroup** in the resource group list.
+
+2. On the **myResourceGroup** page, select **Access control (IAM)** under **Settings**.
+
+3. On the **Access control (IAM)** page, select **Add role assignment**.
+
+4. On the **Add role assignment** page, enter the following values:
+
+   - **Role**: Select **Contributor**.
+
+   - **Assign access to**: Select **User, group, or service principal**.
+
+   - **Select**: Select your user account.
+
+5. Select **Save**.
+
+### Delete a Azure role assignment
+
+1. In the Azure portal, select **Resource groups** on the far left. Then select **myResourceGroup** in the resource group list.
+
+2. On the **myResourceGroup** page, select **Access control (IAM)** under **Settings**.
+
+3. On the **Access control (IAM)** page, select **Contributor**.
+
+4. On the **Contributor** page, select **Remove**.
+
+5. Select **Yes** to confirm the deletion.
+
+---
