@@ -89,3 +89,17 @@ OpEx is the money a company spends on an ongoing, day-to-day basis in order to r
 - Operational Excellence
 
 ---
+
+### 7. IaaS, PaaS, and SaaS
+
+- `IaaS` is a cloud computing model in which a third-party provider hosts hardware, software, servers, storage, and other infrastructure components on behalf of its users. IaaS providers also host users’ applications and handle tasks including system maintenance, backup and resiliency planning.
+
+- `PaaS` is a cloud computing model in which a third-party provider delivers hardware and software tools — usually those needed for application development — to users over the internet. A PaaS provider hosts the hardware and software on its own infrastructure. As a result, PaaS frees users from having to install in-house hardware and software to develop or run a new application.
+
+- `SaaS` is a cloud computing model in which a third-party provider hosts applications and makes them available to users over the internet. SaaS is one of three main categories of cloud computing, alongside infrastructure as a service (IaaS) and platform as a service (PaaS).
+
+- Example of the IaaS: Virtual Machines, Storage, Networking, etc.
+- Example of the PaaS: Azure App Service, Azure SQL Database, Azure Kubernetes Service, etc.
+- Example of the SaaS: Microsoft 365, Dynamics 365, etc.
+
+---
