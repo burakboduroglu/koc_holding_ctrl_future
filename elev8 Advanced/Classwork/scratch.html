@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>This is <em>emphasized</em></p>
+    <br />
+    <p>This is <strong>strong</strong></p>
+
+    <i>This is in italics</i>
+    <br />
+    <em>This is <em>emphasized</em></em>
+    <br />
+    <br />
+    <small>This is a smaller text</small>
+
+    <p>Do not forget to buy <mark>milk</mark> today</p>
+    <p>My favourite color is <del>blue</del> <ins>red</ins></p>
+    <p>My favourite color is <del>blue</del> red</p>
+
+    <p>This is <sub>subscripted</sub> text</p>
+
+    <p>This is <sup>superscripted</sup> text</p>
+
+    <h1>My Web Page</h1>
+
+    <p>Here is quote from WWF's website</p>
+
+    <blockquote cite="http://www.worldwildlife.org/who/index.html%22%3E">
+      For 60 years, WWF has worked to help people and nature thrive. As the
+      world’s leading conservation organization, WWF works in nearly 100
+      countries. At every level, we collaborate with people around the world to
+      develop and deliver innovative solutions that protect communities,
+      wildlife, and the places in which they live.
+    </blockquote>
+
+    <p>
+      WWF's goal is to:
+      <q>Build a future where people live in harmony with nature.</q>
+    </p>
+
+    <p>
+      The <abbr title="World Health Organization">WHO</abbr> was founded in
+      1948.
+    </p>
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+    <bdo dir="rtl">This text will be written from right to left</bdo>
+    <p>My Best Friends:</p>
+    <ul>
+      <li>Sally</li>
+      <li>Jose</li>
+      <li>Paul</li>
+    </ul>
+    <p>Countries:</p>
+    <ul>
+      <li>China</li>
+      <li>United States</li>
+      <li>United Kingdom</li>
+      <li>France</li>
+    </ul>
+    <video
+      width="400"
+      controls=""
+      src="savagearchives.info/video/20-Timer-sm.mp4"
+      type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <p>
+      Video courtesy of
+      <a href="http://www.xcode-training-and-tips.com/" target="_blank">
+        Xcode Training
+      </a>
+      .
+    </p>
+
+    <form action="">
+      <label for="fname">First Name:</label>
+      <br />
+      <input type="text" name="fname" id="fname" />
+      <br />
+
+      <label for="lname">Last Name:</label>
+      <br />
+      <input type="text" id="lname" name="lname" />
+    </form>
+
+    <form action="">
+      <input type="checkbox" name="vehicle1" id="vehicle1" value="Bike" />
+      <label for="vehicle1">I have a bike</label>
+      <input type="checkbox" name="vehicle2" id="vehicle2" value="Car" />
+      <label for="vehicle1">I have a car</label>
+      <input type="checkbox" name="vehicle3" id="vehicle3" value="Boat" />
+      <label for="vehicle1">I have a boat</label>
+    </form>
+
+    <form action="/action_page.php" novalidate autocomplete="on" method="get">
+      <label for="fname">First Name:</label>
+      <br />
+      <input type="text" name="fname" id="fname" />
+      <br />
+      <label for="lname">Last Name:</label>
+      <br />
+      <input type="text" id="lname" name="lname" />
+      <br />
+      <input type="submit" value="submit" />
+    </form>
+
+    <form action="">
+      <input type="radio" id="html" name="fav_language" value="HTML" />
+      <label for="html">HTML</label>
+      <br />
+      <input type="radio" id="css" name="fav_language" value="CSS" />
+      <label for="css">CSS</label>
+      <br />
+      <input
+        type="radio"
+        id="javascript"
+        name="fav_language"
+        value="JavaScript" />
+      <label for="javascript">JavaScript</label>
+    </form>
+
+    <form action="">
+      <label for="cars">Choose a car:</label>
+      <select name="cars" id="cars">
+        <!-- size="4" multiple-->
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select>
+    </form>
+
+    <textarea name="message" rows="10" cols="30">
+    The cat was playing in the garden.
+    </textarea>
+
+    <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+    <form action="/action_page.php">
+      <fieldset>
+        <legend>Personalia:</legend>
+        <label for="fname">First Name:</label>
+        <br />
+        <input type="text" name="fname" id="fname" />
+        <br />
+        <label for="lname">Last Name:</label>
+        <br />
+        <input type="text" name="lname" id="lname" />
+        <br />
+        <input type="submit" value="submit" />
+      </fieldset>
+    </form>
+
+    <form action="/action_page.php">
+      <input list="browsers" />
+      <datalist id="browsers">
+        <option value="Internet Explorer"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+      </datalist>
+    </form>
+  </body>
+</html>

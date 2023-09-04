@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(65, 62, 62);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Menu */
+.menu {
+  width: 100%;
+  background-color: rgb(148, 39, 39);
+  padding: 16px 0;
+}
+
+.menu .flex {
+  justify-content: space-between;
+}
+
+.menu h1 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.cart {
+  background-color: rgb(100, 21, 21);
+  padding: 15px 25px;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: 0.5s ease-in-out;
+}
+
+.cart a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 5px;
+  padding-top: 3.5px;
+}
+
+.count {
+  background-color: rgb(148, 39, 39);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 25px;
+  margin-left: 10px;
+}
+
+.cart-icon {
+  font-size: 18px;
+}
+
+.cart:hover {
+  transition: 0.5s ease-in-out;
+  background-color: rgb(85, 62, 62);
+}
+/* Menu End */

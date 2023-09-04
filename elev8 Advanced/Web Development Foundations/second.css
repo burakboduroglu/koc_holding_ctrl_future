@@ -1,0 +1,51 @@
+#two-a {
+  background-color: black;
+  color: white;
+}
+
+#two-b {
+  background-color: rgb(255, 216, 20);
+  color: black;
+  border: 0 solid;
+  padding: 5px 35px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#two-c {
+  background-color: rgb(46, 164, 79);
+  color: white;
+  padding: 5px 15px;
+  border: 0 solid;
+  border-radius: 5px;
+}
+
+#two-d {
+  background-color: rgb(121, 82, 179);
+  color: white;
+  padding: 10px 15px;
+  border: 0 solid;
+  border-radius: 5px;
+}
+
+#two-d-one {
+  color: rgb(108, 117, 125);
+  padding: 10px 15px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+#two-e-one {
+  color: rgb(10, 102, 194);
+  background-color: white;
+  border: 1px solid rgb(10, 102, 194);
+  padding: 10px 25px;
+  border-radius: 20px;
+}
+#two-e {
+  color: white;
+  background-color: rgb(10, 102, 194);
+  border: 0px solid;
+  padding: 10px 25px;
+  border-radius: 20px;
+}
