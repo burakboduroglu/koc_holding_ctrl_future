@@ -1,0 +1,47 @@
+.course-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 350px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.card-price {
+    font-style: italic;
+    color: red;
+}
+
+.card-delete-btn {
+    width: 100px;
+    padding: 10px;
+    border-radius: 30px;
+    border:none;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.refresh-div {
+    text-align: center;
+}
+
+.refresh-btn {
+    width: 100px;
+    padding: 10px;
+    border-radius: 30px;
+    border:none;
+    background-color: green;
+    color: white;
+}

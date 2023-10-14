@@ -1,0 +1,95 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-create{
+  width: 350px;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-label {
+  margin: 10px 0;
+}
+
+.task-input {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  max-width: 328px;
+  min-width: 328px;
+}
+
+.task-button {
+  margin: 15px 0;
+  border: 1px solid lightblue;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.task-button:hover{
+  background-color: lightcoral;
+  cursor: pointer;
+}
+
+.task-header {
+  padding-left: 70px;
+}
+
+.show-task {
+  border: 1px solid green;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+}
+
+.task-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.delete {
+  padding: 5px;
+  font-size: 15px;
+  width: 60px;
+  border: none;
+  border-radius: 30px;
+  background-color: red;
+  color: white;
+  margin-right: 10px;
+}
+
+.edit {
+  padding: 5px;
+  font-size: 15px;
+  width: 60px;
+  border: none;
+  border-radius: 30px;
+  background-color: green;
+  color: white;
+}
+
+.task-item-header {
+  margin-bottom: 0;
+}
+
+.task-update {
+  width: 100%;
+}
+
+.update-button {
+  background-color: darkblue;
+  color: white;
+}
